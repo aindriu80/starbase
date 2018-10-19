@@ -3,7 +3,7 @@
 <template>
 <div id="app">
     <h3>{{title}}</h3>
-   <Character />
+   <Character :id="1" />
 </div>
 </template>
 
