@@ -1,5 +1,5 @@
 <template>
-<div class="">
+<div class="" @click="switchCharacter">
     {{character}}
 </div>
 </template>
@@ -23,6 +23,10 @@ export default {
         .then(response => response.json())
         .then(json => (this.character = json));
       // .catch(response => console.log(response));
+    },
+    switchCharacter() {
+      let random_id = Math.floor(Math.random() * 83) + 1;
+      this.fetchCharacter(random_id);
     }
   },
   created() {
